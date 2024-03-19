@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            -webkit-box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            -box-sizing: border-box;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        ul,
+        ol {
+            list-style-type: none;
+        }
+
+        body {
+            background-color: #0273c7;
+            font-family: 'cambria', sans-serif;
+        }
+
+        @media (min-width:768px) {
+            .container {
+                width: 900px;
+            }
+
+        }
+
+        .container {
+            margin: 10px auto;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .page-title {
+            margin: 17px auto;
+            text-align: center;
+            color: #fff;
+            font-size: 17px;
+        }
+
+        .page-title h1 {
+            font-size: 40px;
+            line-height: 1;
+        }
+
+        .page-title a {
+            color: #ff7777;
+            text-decoration: none;
+        }
+
+        .page-title a:hover {
+            text-decoration: underline;
+            color: #ff3333;
+        }
+
+        .circle-menu-box {
+            width: 600px;
+            height: 600px;
+            position: relative;
+            margin: 30px auto;
+        }
+
+        .circle-menu-box a.menu-item {
+            display: block;
+            text-decoration: none;
+            border-radius: 100%;
+            margin: 20px;
+            text-align: center;
+            width: 100px;
+            height: 100px;
+            background-color: #fff;
+            color: #777;
+            padding: 30px 0;
+            line-height: 1;
+            position: absolute;
+            font-size: 30px;
+
+            transition: all 0.5s;
+            -moz-transition: all 0.5s;
+            -webkit-transition: all 0.5s;
+            -o-transition: all 0.5s;
+        }
+
+        .circle-menu-box a.menu-item:hover {
+            transform: scale(1.5);
+            -webkit-transform: scale(1.5);
+            -moz-transform: scale(1.5);
+            -o-transform: scale(1.5);
+            color: #fff;
+            background: #ff3333;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="page-title">
+            <h1>Simple Circle Menu <br /><small>using CSS and Javascript</small></h1>
+            <small class="author">By <a href="http://www.syakirurohman.net">Syakir Rahman</a></small>
+        </div>
+
+        <div class="menu-container">
+
+            <div class="circle-menu-box">
+
+                <a href="#" class="menu-item">
+                    <span class="fa fa-home"></span>
+                </a>
+
+                <a href="#" class="menu-item">
+                    <span class="fa fa-tag"></span>
+                </a>
+
+                <a href="#" class="menu-item">
+                    <span class="fa fa-info-circle"></span>
+                </a>
+
+                <a href="#" class="menu-item">
+                    <span class="fa fa-comments"></span>
+                </a>
+
+                <a href="#" class="menu-item">
+                    <span class="fa fa-folder-open"></span>
+                </a>
+
+                <a href="#" class="menu-item">
+                    <span class="fa fa-group"></span>
+                </a>
+
+                <a href="#" class="menu-item">
+                    <span class="fa fa-newspaper-o"></span>
+                </a>
+
+                <a href="#" class="menu-item">
+                    <span class="fa fa-sitemap"></span>
+                </a>
+
+
+            </div>
+
+        </div>
+
+
+    </div>
+    <script>
+        var items = document.querySelectorAll('.circle-menu-box a.menu-item');
+
+        for (var i = 0, l = items.length; i < l; i++) {
+            items[i].style.left = (40 - 35 * Math.cos(-0.5 * Math.PI - 2 * (1 / l) * i * Math.PI)).toFixed(4) + "%";
+
+            items[i].style.top = (40 + 35 * Math.sin(-0.5 * Math.PI - 2 * (1 / l) * i * Math.PI)).toFixed(4) + "%";
+        }
+
+    </script>
+</body>
+
+</html>

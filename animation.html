@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scroll-triggered GSAP Animation</title>
+    <!-- Include GSAP CDN -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/ScrollTrigger.min.js"></script>
+    <style>
+        /* CSS for the section */
+        .workes-section {
+            width: 80%;
+            /* Default width */
+            background-color: #ccc;
+            /* Just for visualization */
+            margin: 0 auto;
+            /* Center align */
+            height: 200vh;
+            /* Just for demonstration, adjust as needed */
+        }
+    </style>
+</head>
+
+<body>
+    <div class="workes-section">
+        <!-- Your content here -->
+    </div>
+
+    <script>
+        const container = document.querySelector(".workes-section");
+
+        gsap.to(container, {
+            width: "100%", // Target width
+            duration: 0.5, // Animation duration
+            scrollTrigger: {
+                trigger: container,
+                start: "top 50%", // Start point of the trigger
+                end: "bottom 20%", // End point of the trigger
+                toggleActions: "restart none none reverse", // Toggle actions
+                scrub: true, // Enable scrubbing for smooth scrolling
+                markers: true // Show markers for debugging
+            }
+        });
+    </script>
+</body>
+
+</html>
