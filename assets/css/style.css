@@ -613,42 +613,7 @@ ul:hover .line-two {
     -ms-transform: rotate(357deg) translate(12em) rotate(-357deg); */
 }
 
-/* 
-.serives1 {
-    transform: rotate(-90deg);
-}
 
-.serives2 {
-    transform: rotate(-56deg);
-}
-
-.serives3 {
-    transform: rotate(-30deg);
-
-}
-
-.serives4 {
-    transform: rotate(-3deg);
-}
-
-.serives5 {
-    transform: rotate(180deg);
-}
-
-.serives6 {
-    transform: rotate(204deg);
-
-}
-
-.serives7 {
-    transform: rotate(226deg);
-
-}
-
-.serives8 {
-    transform: rotate(246deg);
-
-} */
 
 .serives-section .flex {
     flex-direction: column;
@@ -661,18 +626,3 @@ ul:hover .line-two {
 }
 
 
-.skillSet-circulardescriptions {
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -122%);
-    width: 35%;
-    /* background: yellow; */
-    color: white;
-    padding: 10px 25px;
-}
-
-.skillset-tittle {
-    margin-top: 18px;
-
-}
