@@ -46,7 +46,7 @@
 main {
     width: 100%;
     background-color: var(--bg-primary-color);
-    /* overflow-x: hidden !important; */
+    /* overflow-x: hidden; */
     position: relative;
 }
 
