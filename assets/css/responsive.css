@@ -21,28 +21,25 @@
     }
 
     .hamburger-icon {
-        /* margin-bottom: 271px; */
         z-index: 99;
         position: absolute;
         right: 11px;
         top: 10px;
     }
-
-
 }
 
 @media (max-width:844px) {
 
-    .stu-review-silder {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        /* background-color: red; */
+    .responsive-silder {
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        width: 600px !important;
     }
 
     .review-box {
         flex-direction: column;
-        width: 400px !important;
+
     }
 
     .previous-btn,
@@ -66,12 +63,46 @@
 
 }
 
+@media (max-width:732px) {
+    .review-box {
+        margin-top: 29px;
+    }
+}
+
+@media (max-width:782px) {
+    .custom-cursor {
+        display: none;
+    }
+
+    .review-box {
+        width: 400px !important;
+        padding: 20px;
+    }
+}
+
 @media (max-width:500px) {
     .text-white {
         font-size: 12px;
         margin-top: 10px;
     }
+}
 
+@media (max-width:423px) {
+    .about-left-part{
+        width: 300px;
+    }
+.about-right-part{
+    width: 300px;
+}
+
+    
+}
+
+@media (max-width:392px) {
+    .review-box {
+        width: 293px !important;
+        padding: 20px;
+    }
 }
 
 .activenav {
