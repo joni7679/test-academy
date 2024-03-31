@@ -202,3 +202,36 @@ function stlickSilder() {
     });
 }
 stlickSilder()
+
+function teamsectionEffect(){
+    let elem = document.querySelectorAll(".team-elem");
+    elem.forEach((val) => {
+        const childNode = val.childNodes[3];
+    
+        if (childNode.nodeType === 1) { // Check if it's an element node
+            val.addEventListener("mouseenter", () => {
+                childNode.style.opacity = "1";
+                childNode.style.transform = "scale(1)";
+            });
+    
+            val.addEventListener("mouseleave", () => {
+                childNode.style.opacity = "0";
+                childNode.style.transform = "scale(0)";
+            });
+    
+            val.addEventListener("mousemove", (event) => {
+                const rect = val.getBoundingClientRect(); // Get the position of .elem relative to the viewport
+                const offsetX = event.clientX - rect.left; // Calculate the X position relative to .elem
+                const offsetY = event.clientY - rect.top; // Calculate the Y position relative to .elem
+                gsap.to(childNode, {
+                    x: offsetX,
+                    y: offsetY,
+                    duration: 0.3, // Duration of the transition in seconds
+                    ease: "power2.out"
+                });
+            });
+        }
+    });
+}
+
+teamsectionEffect()
