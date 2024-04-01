@@ -22,7 +22,7 @@
 }
 
 body {
-    overflow-x: hidden;
+    overflow-x: hidden !important;
 }
 
 ::selection {
@@ -108,7 +108,6 @@ ul:hover .line-two {
     position: absolute;
     top: 40%;
     left: -12%;
-    /* box-shadow: 8px -2px 62px -13px rgb(164, 127, 234); */
 }
 
 .cricle2 {
@@ -126,12 +125,6 @@ ul:hover .line-two {
     height: 100vh;
     font-family: Manrope-Medium;
     position: relative;
-    /* background: rgba(10, 9, 9, 0.25);
-    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
-    backdrop-filter: blur(8px);
-    -webkit-backdrop-filter: blur(8px);
-    border-radius: 10px;
-    border: 1px solid rgba(255, 255, 255, 0.18); */
     backdrop-filter: blur(5px);
     -webkit-backdrop-filter: blur(5px);
 }
@@ -157,13 +150,13 @@ ul:hover .line-two {
 }
 
 .bg-animation {
-    position: fixed;
+    /* position: fixed;
     top: 0;
     left: 0;
     width: 100%;
-    height: 100%;
+    height: 100%; */
 }
-
+/* 
 .bg-animation {
     position: fixed;
     top: 0;
@@ -171,7 +164,7 @@ ul:hover .line-two {
     width: 100%;
     height: 100%;
 
-}
+} */
 
 #stars {
     width: 1px;
@@ -329,7 +322,7 @@ ul:hover .line-two {
 
 
 
-.hero-title {
+.hero-tittle {
     padding: 0 14vw;
     text-transform: uppercase;
 
@@ -376,7 +369,6 @@ ul:hover .line-two {
     font-family: DM-Sans-Regular;
     overflow: hidden;
     width: 80%;
-    height: 100vh;
     background-color: rgb(122, 114, 114);
     border-radius: 15px;
 }
@@ -394,6 +386,7 @@ ul:hover .line-two {
 }
 
 .wrokes-title {
+    padding: 15px;
     width: 413px;
     height: 100%;
     color: var(--white);
@@ -564,7 +557,6 @@ ul:hover .line-two {
 .about-section {
     width: 100%;
     height: 100vh;
-    /* background-color: rgb(93, 89, 89); */
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -588,7 +580,6 @@ ul:hover .line-two {
 
 .about-right-part {
     padding: 10px;
-    /* background-color: yellow; */
     width: 600px;
 }
 

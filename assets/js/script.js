@@ -84,11 +84,11 @@ function horizontalScrollbar() {
             pin: true,
             scrub: true,
             invalidateOnRefresh: true,
-            // markers: true
+            markers: true,
         }
     });
 }
-// horizontalScrollbar()
+horizontalScrollbar()
 
 function navbar() {
     let hamburgerIcon = document.querySelector(".hamburger-icon");
