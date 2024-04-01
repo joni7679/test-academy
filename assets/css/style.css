@@ -51,6 +51,7 @@ main {
     width: 100%;
     background-color: var(--bg-primary-color);
     position: relative;
+    overflow: hidden;
 }
 
 /* humbager icon */
