@@ -71,6 +71,30 @@ function customlink() {
 }
 // customlink();
 
+function loadingAnimation() {
+    var tl = gsap.timeline();
+
+    tl.from(".center-div h1 span", {
+        //    opacity:0,
+        y: 200
+    })
+
+    tl.to(".loader", {
+        top: "-100%",
+        delay: 0.5,
+        duration: 0.6,
+        ease: "expo.out"
+
+    })
+
+    tl.to(".loader", {
+        opacity: 0,
+        display: "none",
+        duration: 0.9,
+    })
+}
+loadingAnimation()
+
 function horizontalScrollbar() {
     let horizontalSection = document.querySelector('.workes-container');
     gsap.to('.workes-container', {
@@ -98,13 +122,13 @@ function navbar() {
     })
 }
 navbar();
-gsap.from(".hero-title h1", {
+gsap.from(".hero-tittle h1", {
     y: 120,
     opacity: 0,
     duration: 0.9,
     stagger: 0.5,
 })
-gsap.from(".hero-title .text-white", {
+gsap.from(".hero-tittle .text-white", {
     scale: 0.5,
     duration: 0.9,
     opacity: 0,
@@ -119,33 +143,9 @@ gsap.to(".img-overly", {
 
 
 })
-function loadingAnimation() {
-    var tl = gsap.timeline();
-    tl.to(".loader", {
-        top: "-100%",
-        delay: 0.5,
-        duration: 0.6,
-        ease: "expo.out"
-
-    })
-    tl.from(".center-div h1 span", {
-        scale: 0.5,
-        x: -50,
-        y: 50,
-        stagger: 0.3,
-        opacity: 0.7,
-        duration: 0.5,
-    })
 
 
 
-    tl.to(".loader", {
-        opacity: 0,
-        display: "none",
-        duration: 0.9,
-    })
-}
-loadingAnimation()
 // gsap.from(".about-left-part", {
 //     duration: 0.3,
 //     // x: "-100%",
@@ -194,7 +194,7 @@ function stlickSilder() {
 
     $(".previous-btn").click(function () {
         $(".stu-review-silder").slick("slickPrev");
-        
+
     });
 
     $(".next-btn").click(function () {
@@ -203,7 +203,7 @@ function stlickSilder() {
 }
 // stlickSilder()
 
-function teamsectionEffect(){
+function teamsectionEffect() {
     let elem = document.querySelectorAll(".team-elem");
     elem.forEach((val) => {
         const childNode = val.childNodes[3];
@@ -217,7 +217,7 @@ function teamsectionEffect(){
                 childNode.style.opacity = "0";
                 childNode.style.transform = "scale(0)";
             });
-    
+
             val.addEventListener("mousemove", (event) => {
                 const rect = val.getBoundingClientRect(); // Get the position of .elem relative to the viewport
                 const offsetX = event.clientX - rect.left; // Calculate the X position relative to .elem
