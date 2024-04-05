@@ -30,6 +30,11 @@ body {
     color: #0A0A0D;
 }
 
+.container {
+    padding: 0 10%;
+
+}
+
 .loader {
     width: 100%;
     height: 100vh;
@@ -157,6 +162,7 @@ ul:hover .line-two {
     width: 100%;
     height: 100%; */
 }
+
 /* 
 .bg-animation {
     position: fixed;
@@ -324,9 +330,13 @@ ul:hover .line-two {
 
 
 .hero-tittle {
-    padding: 0 14vw;
+    /* padding: 0 14vw; */
     text-transform: uppercase;
 
+}
+
+.hero-tittle p {
+    width: 40%;
 }
 
 .img-div {
@@ -340,7 +350,7 @@ ul:hover .line-two {
 
 .img-div img {
     width: 100%;
-    height: 100%;
+    /* height: 100%; */
     object-fit: cover;
 }
 
@@ -410,6 +420,7 @@ ul:hover .line-two {
     align-items: center;
     justify-content: center;
     width: 450px;
+    height: 450px;
     border-radius: 15px;
     border-radius: 7px;
     position: relative;
@@ -560,7 +571,7 @@ ul:hover .line-two {
     height: 100vh;
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content:space-evenly;
 }
 
 .about-left-part {
@@ -781,17 +792,24 @@ ul:hover .line-two {
 /* review section  */
 .review-section {
     width: 100%;
-    background-color: rgb(11, 2, 2);
+    /* background-color: rgb(11, 2, 2); */
     color: var(--white);
     text-transform: capitalize;
-    padding: 72px;
     position: relative;
 
+}
+
+.review-box {
+    /* background-color: red; */
+    padding-left: 15px;
 }
 
 .review-section .flex {
     width: 100%;
     height: 100%;
+    overflow: hidden;
+    margin-top: 25px;
+
     /* background-color: red; */
 }
 
@@ -809,18 +827,23 @@ ul:hover .line-two {
 }
 
 .stu-img {
-    width: 80px;
-    /* height: 150px; */
+    width: 120px;
+    height: 120px;
     border-radius: 8px;
+    background-color: #cbb3b3;
     flex-shrink: 0;
     transform: rotate(-20deg);
+    /* background-image: url(../imges/review-stu-img.png); */
+    background-position:center;
+    overflow: hidden;
 
 }
 
 .stu-img img {
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    object-fit: contain;
+    transform: rotate(22deg);
     border-radius: 6PX;
 }
 
@@ -835,9 +858,7 @@ ul:hover .line-two {
 }
 
 .stu-review img {
-    position: absolute;
-    top: -108px;
-    left: -69px;
+    margin-bottom: 19px;
 }
 
 .stu-review p {
@@ -852,8 +873,8 @@ ul:hover .line-two {
 .previous-btn,
 .next-btn {
     /* display: inline-block; */
-    width: 50px;
-    height: 50px;
+    width: 40px;
+    height: 40px;
     border-radius: 50%;
     background-color: #E0E0DC;
     color: #0A0A0D;
@@ -876,24 +897,26 @@ ul:hover .line-two {
 }
 
 .previous-btn {
-    position: absolute;
-    top: 53%;
-    left: 8%;
+    /* position: absolute;
+    top: 58%;
+    left: 5%;  */
 }
 
 .next-btn {
-    position: absolute;
+    /* position: absolute;
     top: 50%;
-    right: 7%;
+    right: 7%; */
 }
 
 #graphic {
-    margin-top: -56px;
+    margin-top: 92px;
+    padding-left: 50px;
 }
 
 #graphic2 {
     position: absolute;
-    right: 9%;
+    right: 14%;
+    top: 9px;
 }
 
 /* our team section */

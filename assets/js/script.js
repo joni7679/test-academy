@@ -201,19 +201,18 @@ function stlickSilder() {
         $(".stu-review-silder").slick("slickNext");
     });
 }
-stlickSilder()
+// stlickSilder()
 
 function teamsectionEffect(){
     let elem = document.querySelectorAll(".team-elem");
     elem.forEach((val) => {
         const childNode = val.childNodes[3];
-    
         if (childNode.nodeType === 1) { // Check if it's an element node
             val.addEventListener("mouseenter", () => {
                 childNode.style.opacity = "1";
                 childNode.style.transform = "scale(1)";
             });
-    
+
             val.addEventListener("mouseleave", () => {
                 childNode.style.opacity = "0";
                 childNode.style.transform = "scale(0)";
