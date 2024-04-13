@@ -201,7 +201,7 @@ function stlickSilder() {
         $(".stu-review-silder").slick("slickNext");
     });
 }
-// stlickSilder()
+stlickSilder()
 
 function teamsectionEffect() {
     let elem = document.querySelectorAll(".team-elem");
